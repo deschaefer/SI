@@ -3,6 +3,9 @@ var htmlparser = require("htmlparser2");
 const { BlobServiceClient } = require('@azure/storage-blob');
 const { v1: uuid} = require('uuid');
 
+const appInsights = require('applicationinsights');
+appInsights.setup('<instrumentation_key>').start();
+
 function traverse(an_array) {
 
     var rval = "";
